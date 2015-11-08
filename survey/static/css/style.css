@@ -1,7 +1,30 @@
-p {
-    font-size: 100px;
+h1 {
+	font-size: 5em;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
 }
 
-h1 a {
-    color: green;
+body {
+	padding-left: 20px;
+}
+
+.stats{
+	font-size: 1.5em;
+}
+
+.redboldtext{
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.link{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+h3 {
+	color: blue;
+	font-size: 5em;
+    text-align: center;
+    font-family: 'Faster One', cursive;
 }

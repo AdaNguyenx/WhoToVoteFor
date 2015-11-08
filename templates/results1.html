@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/stylefacts.css' %}" />
+
+<html>
+
+    <head> 
+        <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>   
+        <title> Results </title>
+    </head>
+
+    <body>
+
+        <div class="page-header">
+            <h1> Results </h1>
+        </div>
+
+        <div class="text">
+            <p> These are the candidates whose values align with yours in your state: </p>
+            {% for rep in legislators1 %}
+                <p> {{ rep }} </p>
+            {% endfor %}
+        </div>
+    </body>
+</html>

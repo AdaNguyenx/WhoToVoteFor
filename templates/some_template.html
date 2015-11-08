@@ -1,48 +1,93 @@
-<head> 
+{% load staticfiles %}
+
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-</head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/styleform.css' %}" />
 
-<form method='post'>
-	{% csrf_token %}
+<html>
 
-	<p> Question here 1</p>
-    {{ form.as_p}}
-    
-	<p> Question here 2 </p>
-    {{ form.as_p}}
+    <head> 
+        <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>   
+        <title> Voting quiz </title>
+    </head>
 
-    <p> Question here 3 </p>
-    {{ form.as_p}}
+    <body>
 
-    <p> Question here 4 </p>
-    {{ form.as_p}}
+        <div class="page-header">
+            <h1> Who should I vote for? </h1>
+        </div>
 
-    <p> Question here 5 </p>
-    {{ form.as_p}}
+        <form method='post'>
+	       {% csrf_token %}
 
-    <p> Question here 6 </p>
-    {{ form.as_p}}
+            <label for="{{ form.state.id_for_label }}">Your state in abbreviations (eg. NJ):</label>
+            {% if form.state.errors %}
+                <div class ="error"> <p> Please enter your state </p> </div>
+            {% endif %}
+            {{ form.state }}
 
-    <p> Question here 7 </p>
-    {{ form.as_p}}
+        	<p> <b> Do you think the recreational consumption of marijuana should be legalized in your state ? </b> <a href="/marijuana">Learn more</a> </p>
+            {% if form.answer1.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer1 }}
+            
+        	<p> <b> Should we welcome refugees and or immigrants in coming in your state ? </b> <a href="/refugees">Learn more</a> </p>
+            {% if form.answer2.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer2 }}
 
-    <p> Question here 8 </p>
-    {{ form.as_p}}
+            <p> <b> Should abortion be free in your state? </b> <a href="/abortions">Learn more</a> </p>
+            {% if form.answer3.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer3 }}
 
-    <p> Question here 9 </p>
-    {{ form.as_p}}
+            <p> <b> Should death penalty be abolished ? </b> <a href="/dealthpenalty">Learn more</a> </p>
+            {% if form.answer4.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer4 }}
 
-    <p> Question here 10 </p>
-    {{ form.as_p}}
+            <p> <b> Should health care become public? </b> <a href="/healthcare">Learn more</a> </p>
+            {% if form.answer5.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer5 }}
 
-    <p> Question here 11 </p>
-    {{ form.as_p}}
+            <p> <b> Do you believe in global warming? </b> <a href="/globalwarming">Learn more</a> </p>
+            {% if form.answer6.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer6 }}
 
-    <input type='submit' value='submit'>
+            <p> <b> Do you think your state needs a raise in minimum wage ? </b> <a href="/minimumwage">Learn more</a> </p>
+            {% if form.answer7.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer7 }}
 
-    {% for object in someresponse  %}
-  	<p>{{ object.answer }}</p>
-	{% endfor %}
+            <p> <b> Should we restrain the access of guns in your state ? </b> <a href="/gunsright">Learn more</a> </p>
+            {% if form.answer8.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer8 }}
 
-</form>
+            <p> <b> Should college education be free? </b> <a href="/education">Learn more</a> </p>
+            {% if form.answer9.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer9 }}
+
+            <p> <b> Should there be more accomodation regarding the veterans and their families? (Relocation , job finding, and loans for their children’s education) </b> <a href="/veterans">Learn more</a> </p>
+            {% if form.answer10.errors %}
+                <div class ="error"> <p> Please select a response </p> </div>
+            {% endif %}
+            {{ form.answer10 }}
+
+            <input type='submit' value='submit'>
+
+        </form>
+    </body>
+</html>

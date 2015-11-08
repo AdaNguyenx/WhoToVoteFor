@@ -2,5 +2,6 @@ from django.db import models
 
 class SurveyResponse(models.Model):
 
-	answer = models.IntegerField()
+	answer = models.CharField(max_length=2)
+
 

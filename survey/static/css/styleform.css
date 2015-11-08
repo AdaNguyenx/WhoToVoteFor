@@ -1,0 +1,43 @@
+h1 {
+	font-size: 2.5em;
+    color: #00ff00;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+}
+
+form {
+	padding-left: 15px;
+	font-family: Verdana, sans-serif;
+}
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+input, textarea {
+	display : block;
+	width : 50px;
+	font    : .9em/1.5em "handwriting", sans-serif;
+	text-align: center;
+	padding : 0 10px;
+	margin  : 0;
+
+  /*-webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box;*/
+}
+
+.error{
+  color: red;
+}
+
+body {
+}

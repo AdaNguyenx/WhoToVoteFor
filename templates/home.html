@@ -1,16 +1,35 @@
 {% load staticfiles %}
+
+<link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
 <html>
 
-	<head> 
+	<head>
 		<title> Hello there </title>
 	</head>
 
 	<body>
-		<div>
+		
 			<h1> Voting is fun! </h1>
-		</div>
+
+			<h2> However, in 2012... </h2>
+			<div class="stats">
+			<p> Only <span class="redboldtext"> % </span> of people vote in <span class="redboldtext">Presidential</span> election </p>
+			<p> Only <span class="redboldtext"> % </span> of people vote in <span class="redboldtext">Senatorial</span> election </p>
+			<p> Only <span class="redboldtext"> % </span>  of people vote in <span class="redboldtext">Congressional</span> election </p>
+			<p> Only <span class="redboldtext"> % </span>  of people vote in <span class="redboldtext">State Senate</span> election </p>
+			</div>
+
+
+			<h3> Let's be a part of a change! </h3>
+			<div class = "link">
+			<p> <a href="/survey">See who you should vote here with this quiz!</a> </p>
+			</div>
+		
 	</body>
 
 </html>
